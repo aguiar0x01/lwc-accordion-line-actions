@@ -1,0 +1,39 @@
+<template>
+    <section class="container">
+
+        <section class="accordion-container">
+            <section class="accordion-line-header">
+                <lightning-button-icon
+                    class="chevrondown-button"
+                    icon-name={currentChevronIcon}
+                    variant="bare"
+                    icon-class="slds-m-around_xx-small"
+                    onclick={handleChevronClick}
+                ></lightning-button-icon>
+    
+                <h2 class="accordion-label" onclick={handleAccordionLabelClick}>{accordionLabel}</h2>
+            </section>
+                
+            <section class="accordion-actions">
+                <template for:each={actions} for:item="action">
+                    <button
+                        id={action.targetId}
+                        key={action.targetId}
+                        onclick={action.buttonHandler} 
+                        class={action.sldsButtonClass}
+                        >
+                        {action.buttonLabel}
+                    </button>
+                </template>
+            </section>
+        </section>
+
+        <template lwc:if={isSectionOpened}>
+            <section class="inner-section">
+                 <slot name="content"></slot>
+            </section>
+        </template>
+
+    </section>
+
+</template>

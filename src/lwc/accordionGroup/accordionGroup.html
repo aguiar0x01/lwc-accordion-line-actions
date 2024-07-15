@@ -1,0 +1,14 @@
+<template>
+    <section class="accordion-section-label">
+        <lightning-icon
+            icon-name="standard:opportunity"
+            alternative-text="opportunity"
+            title=""
+        ></lightning-icon>
+        <h2>{accordionGroupLabel}</h2>
+    </section>
+    <hr>
+    <section class="accordion-group">
+        <slot name="accordion-sections"></slot>
+    </section>
+</template>

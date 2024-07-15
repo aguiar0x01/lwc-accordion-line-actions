@@ -1,0 +1,35 @@
+.accordion-group {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+}
+
+hr {
+    margin: 0;
+    height: 0;
+    border-top: 1px solid #c9c9c9;
+}
+
+.accordion-section-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.0rem;
+    font-weight: 750;
+    background-color: white;
+    color: rgb(24, 24, 24);
+}
+
+.accordion-section-label lightning-icon {
+    margin-left: 15px
+}
+
+.accordion-section-label h2 {
+    margin-left: 15px
+}

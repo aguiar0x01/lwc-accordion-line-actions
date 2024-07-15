@@ -1,0 +1,13 @@
+<template>
+    <c-accordion-group accordion-group-label={accordionGroupLabel}>
+        <div slot="accordion-sections">
+            <template for:each={targetOpportunities} for:item="record">
+                <c-accordion key={record.Id} accordion-label={record.Name} actions={record.AccordionLineActions}>
+                    <div slot="content">
+                        <c-sample-content></c-sample-content>
+                    </div>
+                </c-accordion>
+            </template>
+        </div>
+    </c-accordion-group>
+</template>

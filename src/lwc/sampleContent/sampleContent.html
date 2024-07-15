@@ -1,0 +1,24 @@
+<template>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr>
+                <th scope="col">Coluna 1</th>
+                <th scope="col">Coluna 2</th>
+                <th scope="col">Coluna 3</th>
+                <th scope="col">Coluna 4</th>
+                <th scope="col">Coluna 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={tableData} for:item="row">
+                <tr key={row.id}>
+                    <td>{row.col1}</td>
+                    <td>{row.col2}</td>
+                    <td>{row.col3}</td>
+                    <td>{row.col4}</td>
+                    <td>{row.col5}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>

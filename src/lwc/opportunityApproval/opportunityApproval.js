@@ -57,7 +57,7 @@ export default class OpportunityApproval extends LightningElement {
 
         return function(event) {
             if (APPROVAL_ACTIONS.includes(buttonLabel.toString())) {
-                // Call Apex class ProcessWorkItems or similar
+                // Call Apex class
                 console.log(`[Approval][ButtonLabel = ${buttonLabel}][TargetId = ${targetId}]`);
             }
             else if (buttonLabel == ACTIONS_LABELS.Review) {
@@ -85,25 +85,5 @@ export default class OpportunityApproval extends LightningElement {
             this.targetOpportunities.push(record);
         });
     }
-    
-    // injectDynamicLineActions(records) {
-    //     if (!records) return [];
-    //     let recordsCopy = JSON.parse(JSON.stringify(records));
 
-    //     for (let i = 0; i < recordsCopy.length; i++) {
-    //         let record = recordsCopy[i];
-    //         let lineActionsCopy = JSON.parse(JSON.stringify(BASE_ACCORDION_LINE_ACTIONS));
-
-    //         for (let j = 0; j < lineActionsCopy.length; j++) {
-    //             let lineAction = lineActionsCopy[j];
-    //             lineAction.targetId = record.Id.toString();
-    //             lineAction.buttonHandler = this.createButtonHandler({
-    //                 targetId: lineAction.targetId,
-    //                 buttonLabel: lineAction.buttonLabel
-    //             });
-    //         }
-    //         record.AccordionLineActions = [...lineActionsCopy]
-    //         this.targetOpportunities.push(record);
-    //     }
-    // }
 }

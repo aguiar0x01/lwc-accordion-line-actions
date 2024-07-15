@@ -1,5 +1,5 @@
 <template>
-    <c-accordion-group accordion-group-label={accordionGroupLabel}>
+    <c-accordion-group accordion-group-label={accordionGroupLabel} header-icon="standard:opportunity">
         <div slot="accordion-sections">
             <template for:each={targetOpportunities} for:item="record">
                 <c-accordion key={record.Id} accordion-label={record.Name} actions={record.AccordionLineActions}>
